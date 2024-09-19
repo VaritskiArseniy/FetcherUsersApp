@@ -19,6 +19,7 @@
 		AE0D17FE2C9B173B00A4DCEA /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D17FD2C9B173B00A4DCEA /* ScanView.swift */; };
 		AE0D18012C9B1EDC00A4DCEA /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D18002C9B1EDC00A4DCEA /* UIView+Extension.swift */; };
 		AE0D18032C9B1FFC00A4DCEA /* ResultsPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D18022C9B1FFC00A4DCEA /* ResultsPanelView.swift */; };
+		AE4EE43D2C9C3023002D523D /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4EE43C2C9C3023002D523D /* CustomSwitch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		AE0D17FD2C9B173B00A4DCEA /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
 		AE0D18002C9B1EDC00A4DCEA /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		AE0D18022C9B1FFC00A4DCEA /* ResultsPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsPanelView.swift; sourceTree = "<group>"; };
+		AE4EE43C2C9C3023002D523D /* CustomSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			children = (
 				AE0D17FD2C9B173B00A4DCEA /* ScanView.swift */,
 				AE0D18022C9B1FFC00A4DCEA /* ResultsPanelView.swift */,
+				AE4EE43C2C9C3023002D523D /* CustomSwitch.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			files = (
 				AE0D18012C9B1EDC00A4DCEA /* UIView+Extension.swift in Sources */,
 				AE0D18032C9B1FFC00A4DCEA /* ResultsPanelView.swift in Sources */,
+				AE4EE43D2C9C3023002D523D /* CustomSwitch.swift in Sources */,
 				AE0D17E42C9AF80900A4DCEA /* FetcherViewController.swift in Sources */,
 				AE0D17E02C9AF80900A4DCEA /* AppDelegate.swift in Sources */,
 				AE0D17FE2C9B173B00A4DCEA /* ScanView.swift in Sources */,

@@ -25,6 +25,12 @@ class FetcherViewController: UIViewController {
     }()
     
     private var scanView = ScanView()
+    
+    private var resultPanelView: ResultsPanelView = {
+        let view = ResultsPanelView()
+        view.layer.cornerRadius = 34
+        return view
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +40,7 @@ class FetcherViewController: UIViewController {
 
     private func setupUI() {
         view.backgroundColor = .black
-        view.addSubviews([titleLabel,scanView])
+        view.addSubviews([titleLabel,scanView, resultPanelView])
     }
     
     private func setupConstraints() {
@@ -48,6 +54,12 @@ class FetcherViewController: UIViewController {
             $0.size.equalTo(view.bounds.width).offset(56)
         }
         
+        resultPanelView.snp.makeConstraints {
+            $0.leading.equalToSuperview().offset(16)
+            $0.trailing.equalToSuperview().inset(16)
+            $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset(16)
+            $0.height.equalTo(68)
+        }
     }
 
 }
