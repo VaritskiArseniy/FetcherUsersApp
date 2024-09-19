@@ -24,6 +24,8 @@ class FetcherViewController: UIViewController {
         return label
     }()
     
+    private var todoModels: [TodoModel] = []
+    
     private var scanView = ScanView()
     
     private var resultPanelView: ResultsPanelView = {
@@ -37,10 +39,13 @@ class FetcherViewController: UIViewController {
         setupUI()
         setupConstraints()
     }
-
+    
     private func setupUI() {
         view.backgroundColor = .black
         view.addSubviews([titleLabel,scanView, resultPanelView])
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(scanTap))
+        scanView.addGestureRecognizer(tapGesture)
     }
     
     private func setupConstraints() {
@@ -51,7 +56,7 @@ class FetcherViewController: UIViewController {
         
         scanView.snp.makeConstraints {
             $0.center.equalToSuperview()
-            $0.size.equalTo(view.bounds.width).offset(56)
+            $0.size.equalTo(210)
         }
         
         resultPanelView.snp.makeConstraints {
@@ -61,5 +66,32 @@ class FetcherViewController: UIViewController {
             $0.height.equalTo(68)
         }
     }
+    
+    private func fetchTodos() {
+        let userId: Int? = resultPanelView.getIsSwitchOn() ? nil : 5
+        
+        ApiManager.shared.fetchTodoItems(userId: userId) { [weak self] result in
+            switch result {
+            case .success(let todoModels):
+                self?.todoModels = todoModels
+                DispatchQueue.main.async {
+                    self?.updateUIWithFetchedData()
+                }
+                print("Fetched todo items: \(todoModels)")
+            case .failure(let error):
+                print("Error fetching todo items: \(error.localizedDescription)")
+            }
+        }
+    }
 
+    private func updateUIWithFetchedData() {
+        resultPanelView.resultButtonEnable()
+    }
+    
+    @objc
+    private func scanTap() {
+        scanView.toggle()
+        fetchTodos()
+        
+    }
 }

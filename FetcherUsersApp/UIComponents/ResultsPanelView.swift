@@ -22,6 +22,8 @@ class ResultsPanelView: UIView {
         button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
         button.layer.cornerRadius = 22
         button.backgroundColor = Constants.greenColor()
+        button.alpha = 0.3
+        button.isEnabled = false
         return button
     }()
     
@@ -56,5 +58,14 @@ class ResultsPanelView: UIView {
             $0.centerY.equalToSuperview()
         }
         
+    }
+    
+    func resultButtonEnable() {
+        resultsButton.alpha = 1
+        resultsButton.isEnabled = true
+    }
+    
+    func getIsSwitchOn() -> Bool {
+        return customSwitch.getIsOn()
     }
 }

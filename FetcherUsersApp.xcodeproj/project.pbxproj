@@ -20,6 +20,8 @@
 		AE0D18012C9B1EDC00A4DCEA /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D18002C9B1EDC00A4DCEA /* UIView+Extension.swift */; };
 		AE0D18032C9B1FFC00A4DCEA /* ResultsPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D18022C9B1FFC00A4DCEA /* ResultsPanelView.swift */; };
 		AE4EE43D2C9C3023002D523D /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4EE43C2C9C3023002D523D /* CustomSwitch.swift */; };
+		AE4EE4402C9C397D002D523D /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4EE43F2C9C397D002D523D /* TodoModel.swift */; };
+		AE4EE4432C9C9074002D523D /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4EE4422C9C9074002D523D /* ApiManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		AE0D18002C9B1EDC00A4DCEA /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		AE0D18022C9B1FFC00A4DCEA /* ResultsPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsPanelView.swift; sourceTree = "<group>"; };
 		AE4EE43C2C9C3023002D523D /* CustomSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
+		AE4EE43F2C9C397D002D523D /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
+		AE4EE4422C9C9074002D523D /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 		AE0D17DE2C9AF80900A4DCEA /* FetcherUsersApp */ = {
 			isa = PBXGroup;
 			children = (
+				AE4EE4412C9C905D002D523D /* Managers */,
+				AE4EE43E2C9C394D002D523D /* Models */,
 				AE0D17FF2C9B1ECA00A4DCEA /* Extensions */,
 				AE0D17F42C9AFEA100A4DCEA /* Modules */,
 				AE0D17FC2C9B170200A4DCEA /* UIComponents */,
@@ -130,6 +136,22 @@
 				AE0D18002C9B1EDC00A4DCEA /* UIView+Extension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		AE4EE43E2C9C394D002D523D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AE4EE43F2C9C397D002D523D /* TodoModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		AE4EE4412C9C905D002D523D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				AE4EE4422C9C9074002D523D /* ApiManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		C2640EB4D0C87B379FB7DF11 /* Pods */ = {
@@ -277,7 +299,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE4EE4402C9C397D002D523D /* TodoModel.swift in Sources */,
 				AE0D18012C9B1EDC00A4DCEA /* UIView+Extension.swift in Sources */,
+				AE4EE4432C9C9074002D523D /* ApiManager.swift in Sources */,
 				AE0D18032C9B1FFC00A4DCEA /* ResultsPanelView.swift in Sources */,
 				AE4EE43D2C9C3023002D523D /* CustomSwitch.swift in Sources */,
 				AE0D17E42C9AF80900A4DCEA /* FetcherViewController.swift in Sources */,
