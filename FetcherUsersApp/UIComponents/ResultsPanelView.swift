@@ -15,6 +15,8 @@ class ResultsPanelView: UIView {
         static var greenColor = { R.color.cAEE67F() }
     }
     
+    var onResultsButtonTapped: (() -> Void)?
+    
     private lazy var resultsButton: UIButton = {
         let button = UIButton()
         button.setTitle(Constants.buttonText(), for: .normal)
@@ -33,6 +35,7 @@ class ResultsPanelView: UIView {
         super.init(frame: frame)
         setupUI()
         setupConstraints()
+        addTargetToButton()
     }
     
     required init?(coder: NSCoder) {
@@ -60,6 +63,14 @@ class ResultsPanelView: UIView {
         
     }
     
+    private func addTargetToButton() {
+         resultsButton.addTarget(self, action: #selector(didTapResultsButton), for: .touchUpInside)
+     }
+
+     @objc private func didTapResultsButton() {
+         onResultsButtonTapped?()
+     }
+    
     func resultButtonEnable() {
         resultsButton.alpha = 1
         resultsButton.isEnabled = true
@@ -68,4 +79,5 @@ class ResultsPanelView: UIView {
     func getIsSwitchOn() -> Bool {
         return customSwitch.getIsOn()
     }
+    
 }

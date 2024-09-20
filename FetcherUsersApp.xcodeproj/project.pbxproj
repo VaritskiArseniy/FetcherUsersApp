@@ -19,6 +19,9 @@
 		AE0D17FE2C9B173B00A4DCEA /* ScanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D17FD2C9B173B00A4DCEA /* ScanView.swift */; };
 		AE0D18012C9B1EDC00A4DCEA /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D18002C9B1EDC00A4DCEA /* UIView+Extension.swift */; };
 		AE0D18032C9B1FFC00A4DCEA /* ResultsPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0D18022C9B1FFC00A4DCEA /* ResultsPanelView.swift */; };
+		AE4BC39C2C9D5167003108BD /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4BC39B2C9D5167003108BD /* ResultsViewController.swift */; };
+		AE4BC39E2C9D5F7D003108BD /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4BC39D2C9D5F7D003108BD /* InfoView.swift */; };
+		AE4BC3A02C9D7EFB003108BD /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4BC39F2C9D7EFB003108BD /* UIStackView+Extension.swift */; };
 		AE4EE43D2C9C3023002D523D /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4EE43C2C9C3023002D523D /* CustomSwitch.swift */; };
 		AE4EE4402C9C397D002D523D /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4EE43F2C9C397D002D523D /* TodoModel.swift */; };
 		AE4EE4432C9C9074002D523D /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4EE4422C9C9074002D523D /* ApiManager.swift */; };
@@ -41,6 +44,9 @@
 		AE0D17FD2C9B173B00A4DCEA /* ScanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanView.swift; sourceTree = "<group>"; };
 		AE0D18002C9B1EDC00A4DCEA /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		AE0D18022C9B1FFC00A4DCEA /* ResultsPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsPanelView.swift; sourceTree = "<group>"; };
+		AE4BC39B2C9D5167003108BD /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		AE4BC39D2C9D5F7D003108BD /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
+		AE4BC39F2C9D7EFB003108BD /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		AE4EE43C2C9C3023002D523D /* CustomSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
 		AE4EE43F2C9C397D002D523D /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 		AE4EE4422C9C9074002D523D /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
@@ -116,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				AE0D17E32C9AF80900A4DCEA /* FetcherViewController.swift */,
+				AE4BC39B2C9D5167003108BD /* ResultsViewController.swift */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -126,6 +133,7 @@
 				AE0D17FD2C9B173B00A4DCEA /* ScanView.swift */,
 				AE0D18022C9B1FFC00A4DCEA /* ResultsPanelView.swift */,
 				AE4EE43C2C9C3023002D523D /* CustomSwitch.swift */,
+				AE4BC39D2C9D5F7D003108BD /* InfoView.swift */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -134,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				AE0D18002C9B1EDC00A4DCEA /* UIView+Extension.swift */,
+				AE4BC39F2C9D7EFB003108BD /* UIStackView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -299,14 +308,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE4BC39C2C9D5167003108BD /* ResultsViewController.swift in Sources */,
 				AE4EE4402C9C397D002D523D /* TodoModel.swift in Sources */,
 				AE0D18012C9B1EDC00A4DCEA /* UIView+Extension.swift in Sources */,
 				AE4EE4432C9C9074002D523D /* ApiManager.swift in Sources */,
+				AE4BC39E2C9D5F7D003108BD /* InfoView.swift in Sources */,
 				AE0D18032C9B1FFC00A4DCEA /* ResultsPanelView.swift in Sources */,
 				AE4EE43D2C9C3023002D523D /* CustomSwitch.swift in Sources */,
 				AE0D17E42C9AF80900A4DCEA /* FetcherViewController.swift in Sources */,
 				AE0D17E02C9AF80900A4DCEA /* AppDelegate.swift in Sources */,
 				AE0D17FE2C9B173B00A4DCEA /* ScanView.swift in Sources */,
+				AE4BC3A02C9D7EFB003108BD /* UIStackView+Extension.swift in Sources */,
 				AE0D17E22C9AF80900A4DCEA /* SceneDelegate.swift in Sources */,
 				AE0D17F92C9B016100A4DCEA /* R.generated.swift in Sources */,
 			);

@@ -33,7 +33,14 @@ class FetcherViewController: UIViewController {
         view.layer.cornerRadius = 34
         return view
     }()
-
+    
+    private var infoView: InfoView = {
+        let view = InfoView()
+        view.layer.cornerRadius = 18
+        return view
+    }()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -42,17 +49,19 @@ class FetcherViewController: UIViewController {
     
     private func setupUI() {
         view.backgroundColor = .black
-        view.addSubviews([titleLabel,scanView, resultPanelView])
+        view.addSubviews([scanView, resultPanelView, infoView])
+        
+        navigationItem.titleView = titleLabel
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(scanTap))
         scanView.addGestureRecognizer(tapGesture)
+        
+        resultPanelView.onResultsButtonTapped = { [weak self] in
+                 self?.resultButtonPress()
+             }
     }
     
     private func setupConstraints() {
-        titleLabel.snp.makeConstraints {
-            $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
-            $0.centerX.equalToSuperview()
-        }
         
         scanView.snp.makeConstraints {
             $0.center.equalToSuperview()
@@ -65,9 +74,17 @@ class FetcherViewController: UIViewController {
             $0.bottom.equalTo(view.safeAreaLayoutGuide.snp.bottom).inset(16)
             $0.height.equalTo(68)
         }
+        
+        infoView.snp.makeConstraints {
+            $0.leading.equalToSuperview().offset(16)
+            $0.trailing.equalToSuperview().inset(16)
+            $0.bottom.equalTo(resultPanelView.snp.top).offset(-24)
+            $0.height.equalTo(60)
+        }
     }
     
     private func fetchTodos() {
+        infoView.loading()
         let userId: Int? = resultPanelView.getIsSwitchOn() ? nil : 5
         
         ApiManager.shared.fetchTodoItems(userId: userId) { [weak self] result in
@@ -86,12 +103,18 @@ class FetcherViewController: UIViewController {
 
     private func updateUIWithFetchedData() {
         resultPanelView.resultButtonEnable()
+        infoView.completed()
+    }
+    
+    private func resultButtonPress() {
+        let resultsVC = ResultsViewController()
+        resultsVC.resultsModels = todoModels
+        navigationController?.pushViewController(resultsVC, animated: true)
     }
     
     @objc
     private func scanTap() {
         scanView.toggle()
         fetchTodos()
-        
     }
 }
