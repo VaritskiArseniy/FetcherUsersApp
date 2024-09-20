@@ -89,4 +89,12 @@ class ScanView: UIView {
             
         }
     }
+    
+    func startPosition() {
+        logoImageView.image = Constants.wifiOffIcon()
+        circleView1.backgroundColor = Constants.grayColor1()
+        circleView2.backgroundColor = Constants.grayColor2()
+        circleView1.alpha = 1
+        circleView2.alpha = 1
+    }
 }

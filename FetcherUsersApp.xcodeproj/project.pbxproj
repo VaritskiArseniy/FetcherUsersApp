@@ -22,6 +22,7 @@
 		AE4BC39C2C9D5167003108BD /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4BC39B2C9D5167003108BD /* ResultsViewController.swift */; };
 		AE4BC39E2C9D5F7D003108BD /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4BC39D2C9D5F7D003108BD /* InfoView.swift */; };
 		AE4BC3A02C9D7EFB003108BD /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4BC39F2C9D7EFB003108BD /* UIStackView+Extension.swift */; };
+		AE4BC3A22C9D9377003108BD /* ResultsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4BC3A12C9D9377003108BD /* ResultsCollectionViewCell.swift */; };
 		AE4EE43D2C9C3023002D523D /* CustomSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4EE43C2C9C3023002D523D /* CustomSwitch.swift */; };
 		AE4EE4402C9C397D002D523D /* TodoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4EE43F2C9C397D002D523D /* TodoModel.swift */; };
 		AE4EE4432C9C9074002D523D /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE4EE4422C9C9074002D523D /* ApiManager.swift */; };
@@ -47,6 +48,7 @@
 		AE4BC39B2C9D5167003108BD /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		AE4BC39D2C9D5F7D003108BD /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		AE4BC39F2C9D7EFB003108BD /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		AE4BC3A12C9D9377003108BD /* ResultsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsCollectionViewCell.swift; sourceTree = "<group>"; };
 		AE4EE43C2C9C3023002D523D /* CustomSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSwitch.swift; sourceTree = "<group>"; };
 		AE4EE43F2C9C397D002D523D /* TodoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoModel.swift; sourceTree = "<group>"; };
 		AE4EE4422C9C9074002D523D /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 		AE0D17FC2C9B170200A4DCEA /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				AEFDF9F52C9DC83C009BCA83 /* Cells */,
 				AE0D17FD2C9B173B00A4DCEA /* ScanView.swift */,
 				AE0D18022C9B1FFC00A4DCEA /* ResultsPanelView.swift */,
 				AE4EE43C2C9C3023002D523D /* CustomSwitch.swift */,
@@ -161,6 +164,14 @@
 				AE4EE4422C9C9074002D523D /* ApiManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		AEFDF9F52C9DC83C009BCA83 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AE4BC3A12C9D9377003108BD /* ResultsCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		C2640EB4D0C87B379FB7DF11 /* Pods */ = {
@@ -311,6 +322,7 @@
 				AE4BC39C2C9D5167003108BD /* ResultsViewController.swift in Sources */,
 				AE4EE4402C9C397D002D523D /* TodoModel.swift in Sources */,
 				AE0D18012C9B1EDC00A4DCEA /* UIView+Extension.swift in Sources */,
+				AE4BC3A22C9D9377003108BD /* ResultsCollectionViewCell.swift in Sources */,
 				AE4EE4432C9C9074002D523D /* ApiManager.swift in Sources */,
 				AE4BC39E2C9D5F7D003108BD /* InfoView.swift in Sources */,
 				AE0D18032C9B1FFC00A4DCEA /* ResultsPanelView.swift in Sources */,

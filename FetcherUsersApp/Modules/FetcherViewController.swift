@@ -40,11 +40,15 @@ class FetcherViewController: UIViewController {
         return view
     }()
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         setupConstraints()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        scanView.startPosition()
+        resultPanelView.resultButtonDisenable()
     }
     
     private func setupUI() {

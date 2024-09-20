@@ -19,6 +19,7 @@ class InfoView: UIView {
         static var tapText = { "Tap on the button to fetch todos" }
         static var loadText = { "It’ll take a couple of seconds" }
         static var completedText = { "The fetch successfully completed." }
+        static var resultsText = { "Tap on the todo to change status" }
     }
     
     private lazy var imageView: UIImageView = {
@@ -82,4 +83,7 @@ class InfoView: UIView {
         label.text = Constants.completedText()
     }
     
+    func results() {
+        label.text = Constants.resultsText()
+    }
 }

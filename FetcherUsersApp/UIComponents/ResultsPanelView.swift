@@ -76,6 +76,11 @@ class ResultsPanelView: UIView {
         resultsButton.isEnabled = true
     }
     
+    func resultButtonDisenable() {
+        resultsButton.alpha = 0.3
+        resultsButton.isEnabled = false
+    }
+    
     func getIsSwitchOn() -> Bool {
         return customSwitch.getIsOn()
     }
