@@ -22,6 +22,8 @@ class InfoView: UIView {
         static var resultsText = { "Tap on the todo to change status" }
     }
     
+    private var isAnimating = false
+    
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.image = Constants.tapImage()
@@ -73,9 +75,36 @@ class InfoView: UIView {
         }
     }
     
+    func startAnimating() {
+         guard !isAnimating else { return }
+         isAnimating = true
+         rotateView(view: imageView, duration: 3)
+     }
+     
+     func stopAnimating() {
+         isAnimating = false
+         imageView.layer.removeAllAnimations()
+     }
+     
+     private func rotateView(view: UIView, duration: CFTimeInterval) {
+         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation.z")
+         rotationAnimation.toValue = CGFloat.pi * 2.0
+         rotationAnimation.duration = duration
+         rotationAnimation.isCumulative = true
+         rotationAnimation.repeatCount = .infinity
+         
+         view.layer.add(rotationAnimation, forKey: "rotationAnimation")
+     }
+    
+    func startState() {
+        imageView.image = Constants.tapImage()
+        label.text = Constants.tapText()
+    }
+    
     func loading() {
         imageView.image = Constants.loadImage()
         label.text = Constants.loadText()
+        startAnimating()
     }
     
     func completed() {

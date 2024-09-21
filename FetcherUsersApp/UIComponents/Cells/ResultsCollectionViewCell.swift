@@ -75,12 +75,8 @@ class ResultsCollectionViewCell: UICollectionViewCell {
     
     @objc
     private func checkmarkTapped() {
-        print("checkmarkTapped \(model?.completed)")
-
         model?.completed.toggle()
         delegate?.didTapCheckmark(in: self)
-        
-        print("checkmarkTapped \(model?.completed)")
     }
     
     private func updateUI() {

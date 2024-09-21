@@ -12,6 +12,7 @@ import RswiftResources
 class FetcherViewController: UIViewController {
     
     private enum Constants {
+        static var backgroundColor = { R.color.c111411() }
         static var titleText = { "Fetcher" }
         static var ibmPlexSansFont = { "IBMPlexSans-SemiBold" }
     }
@@ -49,10 +50,11 @@ class FetcherViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         scanView.startPosition()
         resultPanelView.resultButtonDisenable()
+        infoView.startState()
     }
     
     private func setupUI() {
-        view.backgroundColor = .black
+        view.backgroundColor = Constants.backgroundColor()
         view.addSubviews([scanView, resultPanelView, infoView])
         
         navigationItem.titleView = titleLabel
@@ -89,16 +91,22 @@ class FetcherViewController: UIViewController {
     
     private func fetchTodos() {
         infoView.loading()
+        scanView.startAnimatingCircles()
         let userId: Int? = resultPanelView.getIsSwitchOn() ? nil : 5
         
         ApiManager.shared.fetchTodoItems(userId: userId) { [weak self] result in
+            
+            DispatchQueue.main.async {
+                self?.scanView.stopAnimatingCircles()
+                self?.infoView.stopAnimating()
+            }
+            
             switch result {
             case .success(let todoModels):
                 self?.todoModels = todoModels
                 DispatchQueue.main.async {
                     self?.updateUIWithFetchedData()
                 }
-                print("Fetched todo items: \(todoModels)")
             case .failure(let error):
                 print("Error fetching todo items: \(error.localizedDescription)")
             }

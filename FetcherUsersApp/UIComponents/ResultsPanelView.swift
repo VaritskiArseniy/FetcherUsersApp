@@ -60,7 +60,6 @@ class ResultsPanelView: UIView {
             $0.width.equalTo(71)
             $0.centerY.equalToSuperview()
         }
-        
     }
     
     private func addTargetToButton() {
@@ -84,5 +83,4 @@ class ResultsPanelView: UIView {
     func getIsSwitchOn() -> Bool {
         return customSwitch.getIsOn()
     }
-    
 }

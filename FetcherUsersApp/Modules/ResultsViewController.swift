@@ -10,6 +10,7 @@ import UIKit
 class ResultsViewController: UIViewController {
     
     private enum Constants {
+        static var backgroundColor = { R.color.c111411() }
         static var titleText = { "Todos" }
         static var ibmPlexSansFont = { "IBMPlexSans-SemiBold" }
         static var cellIndificator = { "cellIndificator" }
@@ -52,7 +53,7 @@ class ResultsViewController: UIViewController {
     }
     
     private func setupUI() {
-        view.backgroundColor = .black
+        view.backgroundColor = Constants.backgroundColor()
         setupNavigationBar()
         divideTasksIntoSections()
         infoView.results()
